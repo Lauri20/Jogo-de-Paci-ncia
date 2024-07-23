@@ -1,0 +1,66 @@
+body {
+  background-color: #2e7d32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  display: grid;
+  grid-template-rows: 100px auto;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 80%;
+}
+
+.stock, .waste, .foundation-pile, .tableau-pile {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #000;
+  width: 100px;
+  height: 150px;
+}
+
+.stock {
+  grid-column: 1 / 2;
+}
+
+.waste {
+  grid-column: 2 / 3;
+}
+
+.foundation {
+  display: flex;
+  gap: 10px;
+  grid-column: 4 / 8;
+}
+
+.tableau {
+  display: flex;
+  gap: 10px;
+  grid-column: 1 / 8;
+  grid-row: 2 / 3;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: absolute;
+}
+
+.face-down {
+  background-color: #000;
+}
+
+.face-up {
+  background-color: #fff;
+  color: #000;
+}
